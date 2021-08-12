@@ -1,0 +1,1 @@
+web: gunicorn Devperros.wsgi --log-file -
