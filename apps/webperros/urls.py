@@ -1,7 +1,9 @@
 from django.urls import path
-from .views import perro
+from .views import *
 
 
-urlpatterns = {
+urlpatterns = [
     path('', perro, name='perro'),
-}
+    path('generic/', generic, name='generic'),
+    path('elements/', elements, name='elements'),
+]

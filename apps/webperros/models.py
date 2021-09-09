@@ -9,7 +9,9 @@ class libro(models.Model):
     fecha_de_lanzamiento= models.DateField(null=False,auto_now = False , auto_now_add = False)
     idioma= models.CharField(null=False, max_length=50, blank=False)
     disponibilidad= models.CharField(null=False, max_length=50, blank=False)
-    precio= models.DecimalField(max_digits=2, decimal_places=2)
+    precio= models.DecimalField(max_digits=5, decimal_places=2)
+    img = models.URLField(max_length=8000, blank=False, null=False, default='https://i.postimg.cc/xjH36Tw2/2222222222.jpg')
+
 
 class categorias(models.Model):
     pk_categorias = models.AutoField(primary_key=True, null=False, blank=False)
