@@ -12,9 +12,24 @@ class libro(models.Model):
     precio= models.DecimalField(max_digits=5, decimal_places=2)
     img = models.URLField(max_length=8000, blank=False, null=False, default='https://i.postimg.cc/xjH36Tw2/2222222222.jpg')
 
+    class Meta:
+        verbose_name = 'libro'
+        verbose_name_plural = 'libros'
+        ordering = ['nombre']
+
+    def __str__(self):
+        return "{0}".format(self.nombre)
 
 class categorias(models.Model):
     pk_categorias = models.AutoField(primary_key=True, null=False, blank=False)
     variedad = models.CharField(max_length=80,null=False, blank=False)
     editorial = models.CharField(max_length=80, null=False, blank=False)
     fk_libro = models.ForeignKey(libro, null=False, blank=False, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'categoria'
+        verbose_name_plural = 'categorias'
+        ordering = ['variedad']
+
+    def __str__(self):
+        return "{0}".format(self.variedad)

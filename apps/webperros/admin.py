@@ -21,7 +21,7 @@ class resourcecategorias(resources.ModelResource):
 
 class Admincategorias(ImportExportModelAdmin, admin.ModelAdmin):
     search_fields = ['variedad']
-    list_display = ['editorial']
+    list_display = ['editorial','fk_libro']
     resource_class = resourcecategorias
 
 admin.site.register(categorias, Admincategorias)
