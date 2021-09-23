@@ -12,6 +12,7 @@ class libro(models.Model):
     precio= models.DecimalField(max_digits=5, decimal_places=2)
     img = models.URLField(max_length=8000, blank=False, null=False, default='https://i.postimg.cc/xjH36Tw2/2222222222.jpg')
 
+
     class Meta:
         verbose_name = 'libro'
         verbose_name_plural = 'libros'

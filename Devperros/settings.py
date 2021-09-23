@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'Devperros.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -86,7 +86,8 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': 5432,
     }
-}"""
+}
+"""
 
 import dj_database_url
 from decouple import config
@@ -95,7 +96,7 @@ DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
-}
+}"""
 
 
 # Password validation
